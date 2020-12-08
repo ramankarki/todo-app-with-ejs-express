@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  background-color: #E4E9FD;
+  padding: 3rem 0 5rem;
+}
+
+$radius: .3rem;
+$shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+.todo {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 90%;
+
+  &-date {
+    background-color: #A683E3;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+  }
+
+  &-list {
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: .5rem 2rem;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+
+    &Value {
+      margin-left: 1rem;
+    }
+    
+    &-br {
+      height: 1px;
+      width: 100%;
+      border: none;
+      background-color: rgb(231, 231, 231);
+    }
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+
+  &-input {
+    font-size: 1.3rem;
+    border: none;
+    border-bottom: 2px solid #A683E3;
+    padding: 0 0 .5rem 1.8rem;
+    
+    &:focus {
+      border-bottom: 2px solid #A683E3;
+    }
+  }
+
+  &-submit {
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    align-self: center;
+    border-radius: 100rem;
+    border: none;
+    background-color: #A683E3;
+    color: white;
+
+    &:hover {
+      background-color: #9171c9;
+    }
+  }
+}
+
+input[type=checkbox]:checked + p{
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+.copyright {
+  font-size: .9rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 3rem;
+}
