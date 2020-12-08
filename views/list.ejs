@@ -1,0 +1,30 @@
+<%- include("header") -%>
+
+<head>
+  <title>Todo App</title>
+  <link rel="shortcut icon" href="images/todo.svg" type="image/x-icon">
+</head>
+
+<body>
+  <div class="todo">
+    <h1 class="todo-date"><%= listTitle %></h1>
+
+    <div class="todo-list">
+      <% for (let item of items) { %>
+        <label class="todo-item">
+          <input type="checkbox">
+          <p class="todo-itemValue"><%= item %></p>
+        </label>
+        <hr class="todo-item-br">
+      <% } %>
+      <form class="form" action=<%= route %>  method="POST">
+        <input class="form-input" type="text" name="nextItem" placeholder="Add item" autofocus>
+        <button class="form-submit" type="submit">+</button>
+      </form>
+    </div>
+  </div>
+
+  <%- include("footer") -%>
+</body>
+
+</html>
